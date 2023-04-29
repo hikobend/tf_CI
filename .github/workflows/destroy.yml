@@ -31,8 +31,8 @@ jobs:
       - name: Format check
         run: terraform fmt -check -recursive
 
-      - name: Terraform plan
+      - name: Terraform destroy
         run: |
           terraform init -backend=false
-          terraform plan
+          terraform destroy -auto-approve
         working-directory: .
