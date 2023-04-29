@@ -33,7 +33,7 @@ jobs:
       - name: Format check
         run: terraform fmt -check -recursive
 
-      - name: Validation prepare
+      - name: Terraform plan
         run: |
           terraform init -backend=false
           terraform plan
