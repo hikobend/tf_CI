@@ -34,9 +34,6 @@ jobs:
       - name: check user
         run: aws sts get-caller-identity
       
-      - name: list state
-        run: terraform state list
-
       - name: Terraform plan
         run: |
           terraform init -backend=false
